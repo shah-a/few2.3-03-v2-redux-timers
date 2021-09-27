@@ -1,0 +1,28 @@
+.Timer {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.Timer h1 {
+  flex: 1;
+  margin: 1rem;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.Timer h2 {
+  flex: 1;
+}
+
+.Timer button {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 4rem;
+}

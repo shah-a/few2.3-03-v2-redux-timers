@@ -1,3 +1,4 @@
+import './App.css';
 import NewTimer from './NewTimer';
 import TimersList from './TimersList';
 

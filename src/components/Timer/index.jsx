@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import './Timer.css';
 import { toggleTimer } from '../../actions';
 
 function Timer({ timer, index }) {

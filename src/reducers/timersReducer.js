@@ -9,7 +9,9 @@ class Timer {
 }
 
 const timersReducer = (state = [], action) => {
-  const name = action.payload.name ? action.payload.name : `Timer ${state.lenth}`;
+  const name = (
+    action.payload.name.trim() ? action.payload.name : `Timer ${state.lenth}`
+  );
 
   switch (action.type) {
     case ADD_TIMER:

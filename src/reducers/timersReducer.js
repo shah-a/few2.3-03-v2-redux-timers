@@ -11,7 +11,7 @@ class Timer {
 const timersReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_TIMER: {
-      const name = action.payload.name.time() ? action.payload.name : `Timer ${state.lenth}`;
+      const name = action.payload.name.trim() ? action.payload.name : `Timer ${state.lenth}`;
       return [...state, new Timer(name)];
     }
     case TOGGLE_TIMER:

@@ -1,4 +1,4 @@
-import { ADD_TIMER, TOGGLE_TIMER } from '../actions';
+import { ADD_TIMER, TOGGLE_TIMER, UPDATE_TIME } from '../actions';
 
 class Timer {
   constructor(name) {
@@ -17,6 +17,14 @@ const timersReducer = (state = [], action) => {
     case TOGGLE_TIMER:
       return state.map((timer, index) => {
         if (index === action.payload.index) return { ...timer, active: !timer.active };
+        return timer;
+      });
+    case UPDATE_TIME:
+      return state.map((timer) => {
+        if (timer.active) {
+          const newTime = timer.time + action.payload.deltaTime;
+          return { ...timer, time: newTime };
+        }
         return timer;
       });
     default:

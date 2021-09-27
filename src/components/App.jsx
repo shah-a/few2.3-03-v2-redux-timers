@@ -1,7 +1,9 @@
+import NewTimer from './NewTimer';
+
 function App() {
   return (
     <div className="App">
-      <h1>Salaam, world :)</h1>
+      <NewTimer />
     </div>
   );
 }

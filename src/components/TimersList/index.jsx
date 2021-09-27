@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 // import { selectTimer } from '../../actions';
 import Timer from '../Timer';
 
@@ -10,7 +9,7 @@ function TimersList() {
     <div className="TimersList">
       {timers.map((timer, index) => (
         <Timer
-          key={uuidv4()}
+          key={timer.id}
           timer={timer}
           index={index}
         />

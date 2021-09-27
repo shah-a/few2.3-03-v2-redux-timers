@@ -1,7 +1,9 @@
+import { v4 as uuidv4 } from 'uuid';
 import { ADD_TIMER, TOGGLE_TIMER, UPDATE_TIME } from '../actions';
 
 class Timer {
   constructor(name) {
+    this.id = uuidv4();
     this.name = name;
     this.time = 0;
     this.active = false;

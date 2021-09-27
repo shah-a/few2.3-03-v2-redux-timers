@@ -27,7 +27,7 @@ setInterval(() => {
   const deltaTime = now - lastUpdate;
   lastUpdate = now;
   store.dispatch(updateTime(deltaTime));
-}, 1000);
+}, 50);
 
 ReactDOM.render(
   <React.StrictMode>
